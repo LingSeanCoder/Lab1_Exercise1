@@ -1,0 +1,79 @@
+<!-- ATOMIC MILESTONE T-01: No div tags allowed -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://placehold.co data:; style-src 'self'; script-src 'self'">
+    <title>Nguyen Dinh Sang - Production Portfolio</title>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
+        <h1>Nguyen Dinh Sang</h1>
+    </header>
+
+    <nav role="navigation" aria-label="Primary">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content" role="main">
+        <section id="about">
+            <h2>About</h2>
+            <p>Hello, I am Nguyen Dinh Sang. I am a software engineer focused on modern web development, optimizing user experience and accessibility.</p>
+            
+            <form>
+                <label for="email">Contact Email:</label>
+                <input type="email" id="email" name="email" required minlength="5" placeholder="name@example.com">
+                <button type="submit">Send</button>
+                <p role="status" aria-live="polite" id="form-status"></p>
+            </form>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <article data-category="web">
+                <figure>
+                    <img src="https://placehold.co/200x200" width="200" height="200" alt="Web App project interface" loading="lazy" decoding="async">
+                    <figcaption>Web App Project</figcaption>
+                </figure>
+                <h3>Web Application</h3>
+                <p>Task management web application using Vanilla JS and LocalStorage.</p>
+            </article>
+
+            <article data-category="mobile">
+                <figure>
+                    <img src="https://placehold.co/200x200" width="200" height="200" alt="Mobile App project interface" loading="lazy" decoding="async">
+                    <figcaption>Mobile App Project</figcaption>
+                </figure>
+                <h3>Mobile Application</h3>
+                <p>Health tracking mobile application with a minimalist interface, optimized for performance.</p>
+            </article>
+
+            <article data-category="tool">
+                <figure>
+                    <img src="https://placehold.co/200x200" width="200" height="200" alt="CLI Tool project interface" loading="lazy" decoding="async">
+                    <figcaption>CLI Tool Project</figcaption>
+                </figure>
+                <h3>CLI Tool</h3>
+                <p>Command-line tool for automating project build and deployment processes.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2026 Nguyen Dinh Sang. All rights reserved.</p>
+    </footer>
+
+    <dialog id="a11y-dialog">
+        <h2>Notification</h2>
+        <p>This is an accessible notification dialog.</p>
+        <button type="button">Close</button>
+    </dialog>
+</body>
+</html>
