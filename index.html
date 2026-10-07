@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://placehold.co data:; style-src 'self'; script-src 'self'">
-    <title>Nguyen Dinh Sang - Production Portfolio</title>
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <title>Nguyen Dinh Sang — Production Portfolio</title>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -18,6 +22,7 @@
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
@@ -25,13 +30,6 @@
         <section id="about">
             <h2>About</h2>
             <p>Hello, I am Nguyen Dinh Sang. I am a software engineer focused on modern web development, optimizing user experience and accessibility.</p>
-            
-            <form>
-                <label for="email">Contact Email:</label>
-                <input type="email" id="email" name="email" required minlength="5" placeholder="name@example.com">
-                <button type="submit">Send</button>
-                <p role="status" aria-live="polite" id="form-status"></p>
-            </form>
         </section>
 
         <section id="projects">
@@ -64,14 +62,28 @@
                 <p>Command-line tool for automating project build and deployment processes.</p>
             </article>
         </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <form>
+                <p>
+                    <label for="email">Contact Email:</label>
+                    <input type="email" id="email" name="email" required minlength="5" placeholder="name@example.com">
+                </p>
+                <p>
+                    <button type="submit">Send</button>
+                </p>
+                <p role="status" aria-live="polite" id="form-status"></p>
+            </form>
+        </section>
     </main>
 
     <footer role="contentinfo">
         <p>&copy; 2026 Nguyen Dinh Sang. All rights reserved.</p>
     </footer>
 
-    <dialog id="a11y-dialog">
-        <h2>Notification</h2>
+    <dialog id="a11y-dialog" aria-labelledby="dialog-title">
+        <h2 id="dialog-title">Notification</h2>
         <p>This is an accessible notification dialog.</p>
         <button type="button">Close</button>
     </dialog>
