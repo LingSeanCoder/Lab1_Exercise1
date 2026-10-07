@@ -1,6 +1,6 @@
 /* ==========================================================================
    Components — css/components.css
-   Buttons, cards, forms, dialog, nav, header, footer
+   Buttons, cards, forms, dialog, nav, header, footer, filter bar
    Depends on: css/tokens.css, css/reset.css, css/layout.css
    ========================================================================== */
 
@@ -150,6 +150,10 @@ input:invalid:not(:placeholder-shown) {
   min-height: 1.5em;
 }
 
+[role="status"]:empty {
+  display: none;
+}
+
 /* --- 9. Dialog --- */
 dialog {
   background: var(--color-surface);
@@ -172,7 +176,56 @@ footer[role="contentinfo"] {
   text-align: center;
 }
 
-/* --- 11. Reduced motion --- */
+/* --- 11. Filter bar (in #projects) --- */
+fieldset {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  margin-block-end: var(--space-5);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+legend {
+  font-weight: 600;
+  padding-inline: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+fieldset button {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+fieldset button[aria-pressed="true"] {
+  background: var(--color-primary);
+  color: var(--color-primary-contrast);
+  border-color: var(--color-primary);
+}
+
+fieldset button:hover:not([aria-pressed="true"]) {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* --- 12. Open dialog button --- */
+#open-dialog-btn {
+  background: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  margin-block-start: var(--space-4);
+}
+
+#open-dialog-btn:hover {
+  background: var(--color-primary);
+  color: var(--color-primary-contrast);
+}
+
+/* --- 13. Reduced motion --- */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
