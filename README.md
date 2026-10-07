@@ -1,33 +1,43 @@
 # Lab 1 Exercise 1 — Semantic DOM Architecture & A11y Contract
 
-**Student:** Nguyễn Đình Sang
+**Student:** Nguyen Dinh Sang
+**Student ID:** 24521521
 **Repo:** https://github.com/LingSeanCoder/Lab1_Exercise1
 
 ---
 
 ## Overview
 
-Homework 1 — Production Portfolio. Vanilla HTML/CSS/JS, WCAG 2.2 AA, mobile-first.
+Homework 1 — Production Portfolio. Built with **vanilla HTML5 + modern CSS + ES6+ JavaScript**, no framework, no CDN.
+
+Targets **WCAG 2.2 AA** accessibility, mobile-first responsive design, and strict CSP.
+
+---
 
 ## Structure
+
 
 ```text
 Lab1_Exercise1/
 ├── README.md
 ├── TASK_DECOMPOSITION.md
 ├── project-rules.md
-└── hw1-portfolio/
-    ├── index.html
-    ├── css/
-    │   ├── tokens.css
-    │   ├── reset.css
-    │   ├── layout.css
-    │   └── components.css
-    └── js/
-        ├── skip-link.js
-        ├── filter.js
-        ├── form-validate.js
-        └── dialog.js
+├── index.html
+├── css/
+│ ├── tokens.css # design tokens (light + dark)
+│ ├── reset.css # box-sizing + base normalization
+│ ├── layout.css # mobile-first grid + spacing
+│ └── components.css # card, button, form, dialog, filter bar
+├── js/
+│ ├── skip-link.js # focus management for skip link
+│ ├── filter.js # project filter without innerHTML
+│ ├── form-validate.js # email validation + aria-live status
+│ └── dialog.js # native <dialog> accessibility
+└── docs/
+├── 01-landmark-tree.png
+├── 02-lighthouse.png
+├── 03-light-mode.png
+└── 04-dialog-open.png
 ```
 
 ## How to run
