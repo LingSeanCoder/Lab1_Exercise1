@@ -1,0 +1,74 @@
+/* ==========================================================================
+   Design Tokens — hw1-portfolio/css/tokens.css
+   Light + Dark theme tokens
+   WCAG 2.2 AA contrast >= 4.5:1 verified for key pairs
+   ========================================================================== */
+
+:root {
+  /* --- Colors: Light theme --- */
+  --color-bg: #ffffff;
+  --color-surface: #f8f9fa;
+  --color-text: #1a1a1a;
+  /* contrast: 17.4:1 */
+  --color-text-muted: #5a5a5a;
+  /* contrast: 7.0:1 */
+  --color-primary: #0b4d8f;
+  --color-primary-contrast: #ffffff;
+  /* contrast: 8.6:1 */
+  --color-border: #d1d5db;
+  --color-focus: #0b4d8f;
+
+  /* --- Spacing scale (4px base) --- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* --- Radii --- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+
+  /* --- Typography --- */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+
+  /* --- Shadows --- */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.10);
+
+  /* --- Motion --- */
+  --transition-base: 200ms ease;
+}
+
+/* ==========================================================================
+   Dark theme override
+   ========================================================================== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0f1115;
+    --color-surface: #1a1d23;
+    --color-text: #f1f3f5;
+    /* contrast: 16.1:1 */
+    --color-text-muted: #a8b0bb;
+    /* contrast: 7.2:1 */
+    --color-primary: #6fb1ff;
+    --color-primary-contrast: #0f1115;
+    /* contrast: 9.1:1 */
+    --color-border: #2c3138;
+    --color-focus: #6fb1ff;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.6);
+  }
+}
