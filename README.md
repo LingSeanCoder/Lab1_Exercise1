@@ -1,4 +1,4 @@
-# Lab 1 Exercise 1 — Semantic DOM Architecture & A11y Contract
+# Lab 1 Exercise 1 — Production Portfolio
 
 **Student:** Nguyen Dinh Sang
 **Student ID:** 24521521
