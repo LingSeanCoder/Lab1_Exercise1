@@ -1,0 +1,117 @@
+/* ==========================================================================
+   Layout — css/layout.css
+   Mobile-first responsive structure (base 375px)
+   Depends on: css/tokens.css, css/reset.css
+   ========================================================================== */
+
+/* --- Body base --- */
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+/* --- Container --- */
+.container {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+
+/* --- Skip link (position only) --- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-2);
+  z-index: 100;
+  transition: top var(--transition-base);
+}
+
+.skip-link:focus {
+  top: var(--space-2);
+}
+
+/* --- Header + nav layout --- */
+header {
+  padding-block: var(--space-5);
+}
+
+nav ul {
+  display: flex;
+  gap: var(--space-4);
+  list-style: none;
+  padding: 0;
+}
+
+/* --- Section spacing --- */
+section {
+  padding-block: var(--space-6);
+}
+
+/* --- Projects grid (mobile-first: 1 column) --- */
+#projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+/* --- Form layout (mobile-first) --- */
+form p {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-block-end: var(--space-4);
+}
+
+input,
+button {
+  padding: var(--space-2) var(--space-3);
+}
+
+button {
+  width: 100%;
+}
+
+/* --- Dialog layout (no color) --- */
+dialog {
+  padding: var(--space-5);
+  border-radius: var(--radius-md);
+  max-width: 32rem;
+}
+
+/* ==========================================================================
+   Tablet — min-width: 48rem (768px)
+   ========================================================================== */
+@media (min-width: 48rem) {
+  #projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container {
+    padding-inline: var(--space-6);
+  }
+
+  button {
+    width: auto;
+  }
+
+  form p {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  form p label {
+    min-width: 8rem;
+  }
+}
+
+/* ==========================================================================
+   Desktop — min-width: 64rem (1024px)
+   ========================================================================== */
+@media (min-width: 64rem) {
+  #projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
