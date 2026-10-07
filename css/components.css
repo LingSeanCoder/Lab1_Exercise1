@@ -1,0 +1,183 @@
+/* ==========================================================================
+   Components — css/components.css
+   Buttons, cards, forms, dialog, nav, header, footer
+   Depends on: css/tokens.css, css/reset.css, css/layout.css
+   ========================================================================== */
+
+/* --- 1. Button --- */
+.btn,
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-base);
+  font-weight: 600;
+  line-height: 1.2;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background var(--transition-base),
+              color var(--transition-base),
+              box-shadow var(--transition-base);
+}
+
+.btn--primary,
+button[type="submit"] {
+  background: var(--color-primary);
+  color: var(--color-primary-contrast);
+}
+
+.btn--primary:hover,
+button[type="submit"]:hover {
+  filter: brightness(1.1);
+}
+
+/* --- 2. Focus visible (global) --- */
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* --- 3. Skip link colors --- */
+.skip-link {
+  background: var(--color-primary);
+  color: var(--color-primary-contrast);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* --- 4. Card (article in #projects) --- */
+article {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base),
+              transform var(--transition-base);
+}
+
+article:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+article h3 {
+  font-size: var(--text-xl);
+  margin-block-end: var(--space-3);
+}
+
+article figure {
+  margin: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-block-end: var(--space-4);
+}
+
+article figcaption {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-block-start: var(--space-2);
+}
+
+/* --- 5. Header --- */
+header[role="banner"] {
+  background: var(--color-surface);
+  border-block-end: 1px solid var(--color-border);
+}
+
+header[role="banner"] h1 {
+  font-size: var(--text-2xl);
+  margin-block-end: var(--space-1);
+}
+
+header[role="banner"] p {
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+}
+
+/* --- 6. Nav links --- */
+nav a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+  padding-block: var(--space-2);
+  border-block-end: 2px solid transparent;
+  transition: border-color var(--transition-base),
+              color var(--transition-base);
+}
+
+nav a:hover,
+nav a:focus-visible {
+  border-block-end-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* --- 7. Form --- */
+label {
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+input[type="text"],
+input[type="email"] {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: border-color var(--transition-base),
+              box-shadow var(--transition-base);
+}
+
+input:focus {
+  border-color: var(--color-focus);
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-focus) 25%, transparent);
+}
+
+input:invalid:not(:placeholder-shown) {
+  border-color: #d92d20; /* semantic error color — exception to token rule */
+}
+
+/* --- 8. Status --- */
+[role="status"] {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  min-height: 1.5em;
+}
+
+/* --- 9. Dialog --- */
+dialog {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* --- 10. Footer --- */
+footer[role="contentinfo"] {
+  background: var(--color-surface);
+  border-block-start: 1px solid var(--color-border);
+  padding-block: var(--space-5);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  text-align: center;
+}
+
+/* --- 11. Reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
